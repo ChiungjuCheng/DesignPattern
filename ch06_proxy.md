@@ -22,4 +22,6 @@
 
 * Smart reference 智慧參考
   proxy會定期去檢查是否有client端使用背袋裡的物件，並且記錄該物件是否有被修改過，若被代理物件沒有人使用，則proxy就有可能去銷毀該物件以釋放資源。
+
+  Spring Security的作用機制有使用到proxy pattern
   
