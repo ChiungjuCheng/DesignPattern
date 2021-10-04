@@ -11,6 +11,11 @@ implement該功能類別，並has a 該功能的實作物件。而decorator在�
 ![decorator](picture/decoratorStucture.png)
 
 ## 實例:
-InputStream 
+Decorator的特色就是在創造或是呼叫constructor創立物件時，會傳入有相同類別或interface的物件。
 
+java.io.InputStream FilterInputStream.java BufferedInputStream.java
+sorcecode:
+https://github.com/AdoptOpenJDK/openjdk-jdk11/blob/master/src/java.base/share/classes/java/io/BufferedInputStream.java
+
+decorator介紹
 https://www.youtube.com/watch?v=GCraGHx6gso
