@@ -7,7 +7,11 @@ composite物件本身並不用在意其呼叫的物件是否為composite，他�
 
 除了讓每個類別繼承相同的類別或介面外，可以讓類別implement不同的介面來區分有其為internal node和leaf。
 
+# Structure
+![CompsitePattern](./picture/composite.png)
+
 # Compsite vs Decorator vs Chain
 
-17:02
+參考資料
+https://refactoring.guru/design-patterns/composite
 https://www.youtube.com/watch?v=EWDmWbJ4wRA
