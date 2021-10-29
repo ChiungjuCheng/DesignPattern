@@ -1,5 +1,5 @@
 ## Decorator (wrapper)
-將物件包在另一個物件，並且修飾該物件原有的功能。
+將物件包在另一個物件，並且修飾該物件原有的功能。能夠將動態的添加職責到單一個物件上面。
 
 ## 問題
 現有的物件能夠實現某種功能，而有個需求需要類似的功能，但是與該功能有點不一樣，如果為了實現目標功能而再去實作一個物件出來，這樣若日後有相似的問題，則會產生很多的subclass。
@@ -19,3 +19,6 @@ https://github.com/AdoptOpenJDK/openjdk-jdk11/blob/master/src/java.base/share/cl
 
 decorator介紹
 https://www.youtube.com/watch?v=GCraGHx6gso
+
+decorator pattern
+https://ithelp.ithome.com.tw/articles/10218692
