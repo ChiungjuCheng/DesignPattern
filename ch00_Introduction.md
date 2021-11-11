@@ -15,7 +15,9 @@ TODO 寫SOLID
 2. Structual patterns: 解釋如何讓物件集結起來，並且在較大的結構中使用，同時保持該結構的彈性和效能。
 3. Behaviorl pattern: 維護物件之間的溝通，以及職責的分配。
 
+出自Guru網頁
+Remember that a pattern is more than just a certain way to structure your classes. It may also communicate intent and a problem being addressed.
+
 參考:
 https://refactoring.guru/design-patterns/classification
 
-學習資源
