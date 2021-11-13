@@ -7,7 +7,7 @@
 有許多時候商業邏輯會需要依靠第三方套件的幫忙才能完成或是減少開發時間，但該套件的方法卻只適用於某些特定的類別參數，而該類別卻與client端會使用的類別毫無相關，因此會需要一個「轉接器」，讓client端的物件轉換成適用於第三方套件的物件。
 
 ## 結構
-![diagram](.picture/../picture/adapter_diagram.png)
+![diagram](/picture/adapter_diagram.png)
 
 
 ## 解決

@@ -12,7 +12,7 @@ Invoker (sender): 接受command，擁有0-n個command
 Command : 介面，有很多實現的介面，並擁有一個Receiver
 Receiver : 真正執行邏輯的物件
 
-![command](./picture/command.png)
+![command](/picture/command.png)
 
 實作參考網址
 https://www.tutorialspoint.com/design_pattern/command_pattern.htm

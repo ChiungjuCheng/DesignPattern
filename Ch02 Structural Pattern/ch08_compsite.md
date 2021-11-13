@@ -8,7 +8,7 @@ composite物件本身並不用在意其呼叫的物件是否為composite，他�
 除了讓每個類別繼承相同的類別或介面外，可以讓類別implement不同的介面來區分有其為internal node和leaf。
 
 # Structure
-![CompsitePattern](./picture/composite.png)
+![CompsitePattern](/picture/composite.png)
 
 # 優缺點
 缺點是誤要注意物件的組成順序，例如
