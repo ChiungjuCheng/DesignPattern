@@ -14,9 +14,10 @@ public class NoComposite {
 		System.out.println(order.discountTotalPrice);
 		System.out.println(order.totalPrice);
 	}
+
 }
 
-/** 訂單 */
+/** 訂單 client */
 class Order {
 	// 原價
 	double totalPrice = 0;
@@ -39,7 +40,7 @@ class Order {
 		discountRule.createDiscount(this).forEach(newDiscount -> discountList.add(newDiscount));
 	}
 
-	//(若改用Item做集合，不同種類的Item可以使用不同的折價券，可以讓不同種類的Item變成各個集合)
+	// (若改用Item做集合，不同種類的Item可以使用不同的折價券，可以讓不同種類的Item變成各個集合)
 	// 計算折價 必須要跑迴圈去處理所有折價券，使用composit就可以不用使用這個迴圈
 	void applyDiscount() {
 		double discountTotalPrice = this.totalPrice;
@@ -50,12 +51,33 @@ class Order {
 	}
 }
 
+
 /** 折扣 ，使用單一個component表示一個Discount */
 abstract class Discount {
 	abstract double apply(double price);
 }
 
-// 依照目前的Price或規則回傳Discount
+
+// 減去100元
+class ReduceOneHundred extends Discount {
+
+	@Override
+	double apply(double price) {
+		return price - 100;
+	}
+}
+
+// 減去50元
+class ReduceFifty extends Discount {
+
+	@Override
+	double apply(double price) {
+
+		return price - 50;
+	}
+}
+
+//依照目前的Price或規則回傳Discount
 class DiscountRule {
 
 	Set<String> unUsedDiscounts = new HashSet<>(Arrays.asList("ReduceOneHundred", "ReduceFifty"));
@@ -75,25 +97,6 @@ class DiscountRule {
 		}
 
 		return list;
-	}
-}
-
-// 減去100元
-class ReduceOneHundred extends Discount {
-
-	@Override
-	double apply(double price) {
-		return price - 100;
-	}
-}
-
-// 減去50元
-class ReduceFifty extends Discount {
-
-	@Override
-	double apply(double price) {
-
-		return price - 50;
 	}
 }
 
