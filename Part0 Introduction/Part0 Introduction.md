@@ -18,6 +18,8 @@ TODO 寫SOLID
 出自Guru網頁
 Remember that a pattern is more than just a certain way to structure your classes. It may also communicate intent and a problem being addressed.
 
+### java 實例
+https://stackoverflow.com/questions/1673841/examples-of-gof-design-patterns-in-javas-core-libraries
 參考:
 https://refactoring.guru/design-patterns/classification
 
