@@ -100,7 +100,7 @@ aOS2.doSomething();
 
 # Bridge v.s Adapter
 
-參考資源
+參考資源  
 https://www.youtube.com/watch?v=F1YQ7YRjttI&t=29s
 https://refactoring.guru/design-patterns/bridge
 https://stacktraceguru.com/bridge-design-pattern/
