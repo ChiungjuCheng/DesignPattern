@@ -24,8 +24,8 @@ java.io.InputStream FilterInputStream.java BufferedInputStream.java
 sorcecode:
 https://github.com/AdoptOpenJDK/openjdk-jdk11/blob/master/src/java.base/share/classes/java/io/BufferedInputStream.java
 
-decorator介紹
+decorator介紹  
 https://www.youtube.com/watch?v=GCraGHx6gso
 
-decorator pattern
+decorator pattern  
 https://ithelp.ithome.com.tw/articles/10218692

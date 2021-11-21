@@ -16,7 +16,7 @@ Composite需要注意物件間組合成的順序。
 截圖Guru
 # Demo
 
-# 應用時機
+
 
 
 # Compsite vs Decorator vs Chain
