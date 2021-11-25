@@ -17,8 +17,6 @@ Composite需要注意物件間組合成的順序。
 # Demo
 
 
-
-
 # Compsite vs Decorator vs Chain
 Compsite是把各種物件的行為組裝起來，Decorator是擴充物件的行為，chain讓多個物件都有機會處理某一訊息。
 
@@ -26,7 +24,7 @@ Compsite是把各種物件的行為組裝起來，Decorator是擴充物件的行
 Container  
 https://github.com/frohoff/jdk8u-jdk/blob/master/src/share/classes/java/awt/Container.java
 Component  
-https://github.com/frohoff/jdk8u-jdk/blob/master/src/share/classes/java/awt/Component.java
+https://github.com/frohoff/jdk8u-jdk/blob/master/src/share/classes/java/awt/Component.java  
 Component是一個java類別，其底下有各種實現不同功能的subclass，其中有個invalidate()會檢查其ancestors，在每次移除或添加Component時都會被呼叫。而Container繼承Component，裏頭有個Component的集合。
 
 參考資料  
