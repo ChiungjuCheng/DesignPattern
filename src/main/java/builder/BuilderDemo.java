@@ -1,6 +1,4 @@
-package com.learning.desingpattern.desingpattern;
-
-import java.util.LinkedList;
+package builder;
 
 public class BuilderDemo {
 
