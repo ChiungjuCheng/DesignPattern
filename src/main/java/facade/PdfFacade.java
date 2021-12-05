@@ -19,12 +19,12 @@ import com.itextpdf.layout.property.UnitValue;
 
 public class PdfFacade {
 	
-	void createPdf(String path) {
+	private void createPdf(String path) {
 		File file = new File(path);
 		file.getParentFile().mkdirs();
 	}
 
-	void manipulatePdf(String path, List<String> headers, List<Map<String, String>> body) throws FileNotFoundException {
+	public void manipulatePdf(String path, List<String> headers, List<Map<String, String>> body) throws FileNotFoundException {
 		
 		createPdf(path);
 		
@@ -60,7 +60,6 @@ public class PdfFacade {
 										.forEach(header-> table.addCell(new Cell().setTextAlignment(TextAlignment.CENTER).add(new Paragraph(rowMap.get(header)))))
 			);
 		
-
 		// 設定doc
 		doc.add(table);
 		doc.close();

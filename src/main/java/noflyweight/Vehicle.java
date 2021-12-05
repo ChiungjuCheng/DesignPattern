@@ -1,5 +1,9 @@
-package flyweight;
+package noflyweight;
 
+/**
+ * @author user
+ *
+ */
 public class Vehicle {
 
 	// immutable
@@ -8,6 +12,7 @@ public class Vehicle {
 	// mutable
 	private String moving;
 
+	// 也能用simple factory 產生特定的Engine
 	public Vehicle(Engine engine, String moving) {
 		this.engine = engine;
 		this.moving = moving;
@@ -27,6 +32,10 @@ public class Vehicle {
 
 	public void setMoving(String moving) {
 		this.moving = moving;
+	}
+	
+	public void operation() {
+		System.out.println(engine + " moves "+moving);
 	}
 
 }

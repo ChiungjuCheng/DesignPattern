@@ -1,11 +1,15 @@
 package flyweight;
 
-public class SmallEngine implements Engine{
+public class SmallEngine extends Engine{
 
+	
+	public SmallEngine() {
+		this.type = "Small";
+	}
+	
 	@Override
-	public void operation() {
-		// TODO Auto-generated method stub
-		
+	public String toString() {
+		return "SmallEngine";
 	}
 
 }

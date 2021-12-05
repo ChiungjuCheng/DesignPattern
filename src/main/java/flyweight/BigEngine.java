@@ -1,15 +1,14 @@
 package flyweight;
 
-public class BigEngine implements Engine{
-
+public class BigEngine extends Engine {
 	
 	public BigEngine() {
-		
+		this.type = "Big";
 	}
-
+	
 	@Override
-	public void operation() {
-		// TODO Auto-generated method stub
-		
+	public String toString() {
+		return "BigEngine";
 	}
+	
 }
