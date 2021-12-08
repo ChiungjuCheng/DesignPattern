@@ -17,7 +17,7 @@
 	<name>desingpattern</name>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 		<skipTests>true</skipTests>
 		<itext.version>7.0.2</itext.version>
 	</properties>
@@ -53,6 +53,12 @@
 			<artifactId>pdfa</artifactId>
 			<version>${itext.version}</version>
 		</dependency>
+		<!-- StringUtils -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
