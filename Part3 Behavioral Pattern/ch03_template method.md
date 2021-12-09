@@ -20,6 +20,85 @@
 是一個optional的方法，Abstract Class有default的方法，Concrete Class 可以決定要不要使用它來達到延伸的功能。
 
 # Demo
+為了做出負責驗證的類別，首先使用AbstractAuthenticationFilter定義出固定的驗證流程，接著宣告一個繼承他的Concrete類別AccountAuthenticationFilter。
+
+  
+AbstractAuthenticationFilter - Abstract Class 
+```java
+abstract public class AbstractAuthenticationFilter implements AuthenticationFilter {
+
+	Logger logger = Logger.getLogger(AbstractAuthenticationFilter.class.getName());
+
+	/**
+	 * Template Method
+	 */
+	public void attemptAuthentication(UserDetail unAunthenticationUserDetail) {
+
+		try {
+			if (unAunthenticationUserDetail == null) {
+				throw new IllegalArgumentException("UserDetail is null");
+			}
+
+			UserDetail authenticationUserDetail = authentication(unAunthenticationUserDetail);
+
+			sussessfulProcess(authenticationUserDetail);
+
+		} catch (Exception e) {
+			logger.info(e.getMessage());
+			failProcess(e);
+		}
+
+	}
+
+	abstract public UserDetail authentication(UserDetail unAunthenticationUserDetail) throws AuthenticationException;
+
+	abstract public void sussessfulProcess(UserDetail authenticationUserDetail);
+
+	abstract public void failProcess(Exception e);
+
+}
+```
+
+AccountAuthenticationFilter - Concrete Class
+```java
+public class AccountAuthenticationFilter extends AbstractAuthenticationFilter {
+
+	private UserServiceRepository theUserServiceRepository = new UserServiceRepository();
+
+	/**
+	 * 驗證邏輯
+	 */
+	@Override
+	public UserDetail authentication(UserDetail unAunthenticationUserDetail) throws AuthenticationException {
+
+		String account = unAunthenticationUserDetail.getAccount();
+
+		String userName = theUserServiceRepository.findUserNameByAccount(account)
+				.orElseThrow(() -> new AuthenticationException());
+
+		return new UserDetail(account, userName);
+	}
+
+	@Override
+	public void sussessfulProcess(UserDetail authenticationUserDetail) {
+		System.out.println(authenticationUserDetail + " has authentication !");
+	}
+
+	@Override
+	public void failProcess(Exception e) {
+		System.out.println("authentication fail !");
+	}
+
+}
+
+```
+
+Client
+```java
+AuthenticationFilter authenticationFilter = new AccountAuthenticationFilter();
+		
+authenticationFilter.attemptAuthentication(new UserDetail("account1"));
+```
 
 # Template method V.S general interface implement 
 這個design pattern基本上是仰賴繼承來實現的，因為不是用composite的方法，所以在決定使用這個pattern要謹慎。
@@ -44,6 +123,7 @@ https://tw.twincl.com/programming/*662v
 Concrete Class定義好方法後，交給Abstrac Class來呼叫
 https://www.newton.com.tw/wiki/%E5%A5%BD%E8%90%8A%E5%A1%A2%E5%8E%9F%E5%89%87
 
+# Real world Source Code
 
 
 # 影片參考
