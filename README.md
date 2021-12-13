@@ -5,6 +5,3 @@
 # Part3 Behavioral Pattern
 * [ch03_template method](/Part3%20Behavioral%20Pattern/ch03_template%20method.md)
 * [ch04_iterator](/Part3%20Behavioral%20Pattern/ch04_iterator.md)
-
-
-https://github.com/ChiungjuCheng/DesignPattern/blob/main/Part3%20Behavioral%20Pattern/ch04_iterator.md
