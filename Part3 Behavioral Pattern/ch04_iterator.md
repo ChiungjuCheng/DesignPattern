@@ -10,16 +10,16 @@
 # UML
 ![Iterator UML](/picture/iterator.png)
 
-**Iterator Interface**
+**Iterator Interface**  
 需要包含以下方法:  
 1. 依序取得Container裡面的元素
 2. 取得目前遍歷到的位置
 3. 重新開始遍歷
 
-**Concrete Iterators**
+**Concrete Iterators**  
 為特定的collection實現一種traversal algorithms，iterator必須要能夠追蹤自身遍歷的進度，這樣子能夠讓相同collection的iterators相互獨立。
 
-**Collection and Concrete Collections**
+**Collection and Concrete Collections**  
 必須提供一個到N個拿到iterators的方法。
 
 [Guru](https://refactoring.guru/design-patterns/iterator)
@@ -27,7 +27,8 @@
 # Demo  
 這個Demo直接使用java的Iterable介面ˇ來實現。  
 
-首先必須要讓Collection繼承Iterable介面，才能使用foreach-loop，且該介面已有宣告好需要實作的方法。
+首先必須要讓Collection繼承Iterable介面，才能使用foreach-loop，且該介面已有宣告好需要實作的方法。  
+
 自定義的List類別
 ```java
 public interface ListDemo<E> extends Iterable<E>{
@@ -35,7 +36,8 @@ public interface ListDemo<E> extends Iterable<E>{
 }
 ```
   
-接著在該實作類別中，宣告其拿取Iterator的方法，iterator()，當每次呼叫時都會拿到一個全新的iterator。並宣告一個inner class 實作Iterator介面。
+接著在該實作類別中，宣告其拿取Iterator的方法，iterator()，當每次呼叫時都會拿到一個全新的iterator。並宣告一個inner class 實作Iterator介面。  
+
 DoublyLinkedList 
 ```java
 public class DoublyLinkedListUsingSentinels<E> implements ListDemo<E>{
@@ -101,5 +103,4 @@ Client
 1. 不會暴露出Collection的結構，Iterator只要Client端呼叫該方法，就會給出下一個元素。
 
 # Real world Source Code 
-TODO 
 java.util.Iterator
