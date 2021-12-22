@@ -8,6 +8,9 @@ abstract public class AbstractAuthenticationFilter implements AuthenticationFilt
 
 	Logger logger = Logger.getLogger(AbstractAuthenticationFilter.class.getName());
 
+	/**
+	 * Template Method
+	 */
 	public void attemptAuthentication(UserDetail unAunthenticationUserDetail) {
 
 		try {
