@@ -11,5 +11,4 @@
 **Colleague classes**  
 Colleague透過Mediator與另一個Colleague溝通，否則是和另一個Colleague溝通。
 
-
 [圖片參考](https://ithelp.ithome.com.tw/articles/10225660)
