@@ -7,7 +7,7 @@
 ![memento UML](/picture/memento.png)
 
 **Memento**  
-originator狀態的snapshot。  
+originator狀態的snapshot。擁有兩種介面，Caretaker使用窄介面，只能將Memento傳給其他物件，Originator則使用寬介面，能夠對Memento做存取。
 **Originator**  
 主要功能物件，能藉由產生snapshot儲存自身狀態，也能透過snashots回復狀態。  
 **Caretaker**  
